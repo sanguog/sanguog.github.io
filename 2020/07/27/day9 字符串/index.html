@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>day9 字符串 | sanguog的秘密基地</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="python 学习day 901 字符串和字符​    字符串中的字符分两种：普通字符、转义字符  普通字符 - 除了转移字符以外的字符  转义字符 - 在指定符号前加\用来表示一些特殊功能和特殊意义的  \ \ -  \n \ ‘ \ “ \t  编码字符： \u 4位的十六进制 注意：计算字符串长度的时候，一个转义字符的长度是1  阻止转义（r语法） 在字符串的最前面加 r&#x2F;R ， 那么这个字">
+<meta property="og:type" content="article">
+<meta property="og:title" content="day9 字符串">
+<meta property="og:url" content="http://yoursite.com/2020/07/27/day9%20%E5%AD%97%E7%AC%A6%E4%B8%B2/index.html">
+<meta property="og:site_name" content="sanguog的秘密基地">
+<meta property="og:description" content="python 学习day 901 字符串和字符​    字符串中的字符分两种：普通字符、转义字符  普通字符 - 除了转移字符以外的字符  转义字符 - 在指定符号前加\用来表示一些特殊功能和特殊意义的  \ \ -  \n \ ‘ \ “ \t  编码字符： \u 4位的十六进制 注意：计算字符串长度的时候，一个转义字符的长度是1  阻止转义（r语法） 在字符串的最前面加 r&#x2F;R ， 那么这个字">
+<meta property="og:locale" content="zh">
+<meta property="article:published_time" content="2020-07-27T02:09:06.372Z">
+<meta property="article:modified_time" content="2020-06-30T12:51:12.591Z">
+<meta property="article:author" content="sanguog">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="sanguog的秘密基地" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">sanguog的秘密基地</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">冲冲冲！</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-day9 字符串" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/27/day9%20%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="article-date">
+  <time datetime="2020-07-27T02:09:06.372Z" itemprop="datePublished">2020-07-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      day9 字符串
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="python-学习day-9"><a href="#python-学习day-9" class="headerlink" title="python 学习day 9"></a>python 学习day 9</h1><h2 id="01-字符串和字符"><a href="#01-字符串和字符" class="headerlink" title="01 字符串和字符"></a>01 字符串和字符</h2><p>​    字符串中的字符分两种：普通字符、转义字符</p>
+<ul>
+<li><p>普通字符 - 除了转移字符以外的字符</p>
+</li>
+<li><p>转义字符 - 在指定符号前加\用来表示一些特殊功能和特殊意义的</p>
+<ul>
+<li>\ \ - </li>
+<li>\n</li>
+<li>\ ‘</li>
+<li>\ “</li>
+<li>\t</li>
+</ul>
+<p>编码字符： \u 4位的十六进制</p>
+<p>注意：计算字符串长度的时候，一个转义字符的长度是1</p>
+</li>
+<li><p>阻止转义（r语法）</p>
+<p>在字符串的最前面加 r/R ， 那么这个字符串中的所有的转义字符都无效</p>
+</li>
+</ul>
+<h2 id="02-字符编码"><a href="#02-字符编码" class="headerlink" title="02 字符编码"></a>02 字符编码</h2><h3 id="1-什么是字符编码"><a href="#1-什么是字符编码" class="headerlink" title="1.什么是字符编码"></a>1.什么是字符编码</h3><p>​    计算机在存储数据的时候只能存数字，而且存的是数字的补码</p>
+<p>​    为了能让计算机存储文本数据，给每个字符关联了一个固定的数字，用来对这个字符进行存储，每个字符关联的那个数字就是这个字符的编码值</p>
+<h3 id="2-编码表"><a href="#2-编码表" class="headerlink" title="2. 编码表"></a>2. 编码表</h3><ul>
+<li><p>ASCII码表</p>
+<p>用一个字节来保存字符的编码值（码值范围：0 ~ 127）</p>
+<p>数字在字母前，大写字母在小写字母的前面，它们不是连续的</p>
+</li>
+<li><p>Unicode编码表</p>
+<p>unicode编码表是对ASCII表的扩展（Unicode编码表中包含了ASCII表所有的符号）</p>
+<p>中文范围：4e00 ~ 9fa5</p>
+<ul>
+<li><p>chr函数</p>
+<p>chr(编码值) - 获取指定编码值对应的字符</p>
+</li>
+<li><p>ord函数</p>
+<p>ord(字符) - 获取指定字符对应的编码值</p>
+</li>
+<li><p>编码字符</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="03-字符串相关操作"><a href="#03-字符串相关操作" class="headerlink" title="03 字符串相关操作"></a>03 字符串相关操作</h2><h3 id="1-获取字符串中的元素（获取元素）"><a href="#1-获取字符串中的元素（获取元素）" class="headerlink" title="1.获取字符串中的元素（获取元素）"></a>1.获取字符串中的元素（获取元素）</h3><p>​    字符串获取元素和列表获取元素的语法一样</p>
+<h3 id="2"><a href="#2" class="headerlink" title="2. + * ==  !="></a>2. + * ==  !=</h3><p>​    字符串 + 字符串</p>
+<p>​    字符串 * N / N * 字符串</p>
+<h3 id="3-gt-lt-gt-lt-针对两个字符串"><a href="#3-gt-lt-gt-lt-针对两个字符串" class="headerlink" title="3. &gt;, &lt;, &gt;=, &lt;=  (针对两个字符串)"></a>3. &gt;, &lt;, &gt;=, &lt;=  (针对两个字符串)</h3><p>​    两个字符串比较大小，比较的是第一组不相等的字符的编码值的大小</p>
+<h3 id="4-in-和-not-in"><a href="#4-in-和-not-in" class="headerlink" title="4. in 和 not in"></a>4. in 和 not in</h3><p>​    字符串1 in字符串2 - 判断字符串是否是字符串2的子串</p>
+<h3 id="5-相关函数"><a href="#5-相关函数" class="headerlink" title="5.相关函数"></a>5.相关函数</h3><p>​    max/min/sorted/reversed等，这些函数都适用于字符串</p>
+<p>​    len - 求字符串长度</p>
+<p>​    str(数据) - 将指定数据转换成字符串</p>
+<p>​        所有的数据都能转换成字符串</p>
+<p>​        将数据的打印值作为字符串的内容</p>
+<h2 id="05-字符串相关方法"><a href="#05-字符串相关方法" class="headerlink" title="05 字符串相关方法"></a>05 字符串相关方法</h2><ul>
+<li>字符串.rjust(长度，填充字符) - 靠右</li>
+<li>字符串.zfill(长度) == 字符串.rjust(长度，’0’) - 靠右</li>
+<li>字符串.ljust(长度，填充字符) -  靠左</li>
+<li>字符串.center(长度，填充字符) – 居中</li>
+<li>字符串1.replace(字符串2， 字符串3) - 将字符串1中的所有字符串2全部替换成字符3</li>
+<li>字符串1.replace(字符串2， 字符串3，N) - 将字符串1前N个字符串2替换成字符串3</li>
+<li>字符串1.count(字符串2，开始下标，结束下标) - 出现次数</li>
+<li>字符串.expandtabs() - 将字符串中的制表符替换成8个空格</li>
+<li>字符串1.split（字符串2） - 将字符串1按照字符串2为切割点进行切割</li>
+<li>字符串1.strip（） - 同时删除字符串最左边和最右边的空白</li>
+<li>字符串1.lstrip（） - 删除字符串最左边的空白</li>
+<li>字符串1.rstrip（） - 删除字符串最右边的空白</li>
+<li>字符串1.find（字符串2） - 获取字符串2第一次在字符串1中出现的位置（用正的下标值表示），如果找不到返回 -1</li>
+<li>字符串.join（容器） - 将容器中元素用指定字符串连接在一起（容器中的元素是字符串）</li>
+<li>字符串.lower()：变小写</li>
+<li>字符串.upper()：变大写</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/27/day9%20%E5%AD%97%E7%AC%A6%E4%B8%B2/" data-id="ckd3vhqkp00086kup1nii2jg3" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/07/27/day11%20%E5%87%BD%E6%95%B0%E8%BF%9B%E9%98%B6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          day11 函数进阶
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/07/27/day8%20%20%E5%AD%97%E5%85%B8%E5%92%8C%E5%85%83%E7%BB%84%E3%80%81%E9%9B%86%E5%90%88/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">day8  字典和元组、集合</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/27/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/27/day19%20%E6%8B%B7%E8%B4%9D%20%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%92%8C%20socket/">day19 拷贝 内存管理和 socket</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/27/day18%20%E7%BB%A7%E6%89%BF/">day18 继承</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/27/day17%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">day17 面向对象</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/27/day16%20re%E6%A8%A1%E5%9D%97%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">day16 re模块和面向对象</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 sanguog<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>day19 拷贝 内存管理和 socket | sanguog的秘密基地</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="#day19 拷贝 内存管理和 socket 01 拷贝不管怎么拷贝，都是复制原数据产生一个新的数据并且将新数据的地址返回 02 内存管理 内存管理：python内存管理是自动化（指的是对堆上的内存进行管理）  内存的开辟 需要保存数据的时候系统就会自动在堆上开辟内存空间保存数据。 注意：如果需要被保存的数据是数字或者字符串，系统会先检查专门保存数字字符串的缓存区中是否已经存在这个数据，如果存在直">
+<meta property="og:type" content="article">
+<meta property="og:title" content="day19 拷贝 内存管理和 socket">
+<meta property="og:url" content="http://yoursite.com/2020/07/27/day19%20%E6%8B%B7%E8%B4%9D%20%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%92%8C%20socket/index.html">
+<meta property="og:site_name" content="sanguog的秘密基地">
+<meta property="og:description" content="#day19 拷贝 内存管理和 socket 01 拷贝不管怎么拷贝，都是复制原数据产生一个新的数据并且将新数据的地址返回 02 内存管理 内存管理：python内存管理是自动化（指的是对堆上的内存进行管理）  内存的开辟 需要保存数据的时候系统就会自动在堆上开辟内存空间保存数据。 注意：如果需要被保存的数据是数字或者字符串，系统会先检查专门保存数字字符串的缓存区中是否已经存在这个数据，如果存在直">
+<meta property="og:locale" content="zh">
+<meta property="article:published_time" content="2020-07-27T02:09:06.394Z">
+<meta property="article:modified_time" content="2020-07-03T09:54:20.179Z">
+<meta property="article:author" content="sanguog">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="sanguog的秘密基地" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">sanguog的秘密基地</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">冲冲冲！</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-day19 拷贝 内存管理和 socket" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/27/day19%20%E6%8B%B7%E8%B4%9D%20%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%92%8C%20socket/" class="article-date">
+  <time datetime="2020-07-27T02:09:06.394Z" itemprop="datePublished">2020-07-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      day19 拷贝 内存管理和 socket
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#day19 拷贝 内存管理和 socket</p>
+<h2 id="01-拷贝"><a href="#01-拷贝" class="headerlink" title="01 拷贝"></a>01 拷贝</h2><p>不管怎么拷贝，都是复制原数据产生一个新的数据并且将新数据的地址返回</p>
+<h2 id="02-内存管理"><a href="#02-内存管理" class="headerlink" title="02 内存管理"></a>02 内存管理</h2><ol>
+<li><p>内存管理：python内存管理是自动化（指的是对堆上的内存进行管理）</p>
+</li>
+<li><p>内存的开辟</p>
+<p>需要保存数据的时候系统就会自动在堆上开辟内存空间保存数据。</p>
+<p>注意：如果需要被保存的数据是数字或者字符串，系统会先检查专门保存数字字符串的缓存区中是否已经存在这个数据，如果存在直接返回之前的数据的地址，不存在才会开辟新的内存去保存（短小数字和字符串）</p>
+</li>
+<li><p>内存的释放</p>
+<p>python中的每一个数据都有一个属性用来保存这个数据的引用个数（引用计数），当引用计数的值为0，那么这个数据就会自动销毁</p>
+</li>
+</ol>
+<h2 id="03-server"><a href="#03-server" class="headerlink" title="03 server"></a>03 server</h2><ol>
+<li><p>socket</p>
+<p>socket又叫套接字（实现通信的两端（程序）就是套接字）</p>
+<p>套接字有两种：服务器套接字（server）、客户端套接字（client）</p>
+</li>
+<li><p>服务器套接字</p>
+<ol>
+<li><p>创建socket对象（买电话机）</p>
+<p>socket（family，type） —— 创建一个套接字对象</p>
+<p>family —— IP的类型（ipv4, ipv6）；</p>
+<p>​                    AF_INET == ipv4(默认的)</p>
+<p>​                    AF_INET6 == ipv6</p>
+<p>type —— 传输协议（TCP、UDP)</p>
+<p>​                SOCK_STREAM == TCP</p>
+<p>​                SOCK_DGRAM == UDP</p>
+</li>
+<li><p>绑定ip和端口（插电话线）</p>
+<p>套接字对象.bind((ip地址，端口))</p>
+<p>ip地址 —— 找到服务器对应的计算机；字符串</p>
+<p>端口 —— 区分计算机中不同的服务（服务指的是正在运行的程序）值是整数，范围是0<del>65535（其中0</del>1023属于著名端口）</p>
+</li>
+<li><p>开始监听（等待别人打电话）</p>
+<p>服务器套接字对象.listen(数量) —— 数量决定了同一时间的最大通信数（能处理的客服端最大数量）</p>
+</li>
+<li><p>让服务器一直运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">while True:</span><br><span class="line">	1)接受客户端的请求（接电话）</span><br><span class="line">	connect, address &#x3D; server.accept()</span><br><span class="line">	print(&#39;aaaaaa&#39;)</span><br><span class="line">	2)接受消息</span><br><span class="line">	  recv(字节数) —— 接受数据（字节数——一次能接受的最大的数据）</span><br><span class="line">	re_data &#x3D; connect.recv(1024)</span><br><span class="line">	print(&#39;接受消息&#39;)</span><br><span class="line">	print(str(re_data, encoding&#x3D;&#39;utf-8&#39;))</span><br><span class="line">	3)发送数据</span><br><span class="line">	connect.send(bytes(&#39;你好&#39;, encoding&#x3D;&#39;utf-8&#39;))</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="04-client"><a href="#04-client" class="headerlink" title="04 client"></a>04 client</h2><ol>
+<li><p>创建套接字对象</p>
+</li>
+<li><p>连接服务器（拨号，打电话）</p>
+<p>client。connect((‘10.7.184.61’, 8082))</p>
+</li>
+<li><p>发送消息</p>
+<p>字符串.encode() —— 将转换成二进制数据</p>
+<p>client。send(‘你好吗？吃了吗？’)</p>
+<p>client.send(message.encode())</p>
+</li>
+<li><p>接受消息</p>
+<p>二进制数据.decode() —— 将二进制数据转换成字符串</p>
+<p>re_data = client.recv(1024)</p>
+<p>print(re_data.decode())</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/27/day19%20%E6%8B%B7%E8%B4%9D%20%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%92%8C%20socket/" data-id="ckd3vhql7000h6kupfxr847lc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/07/27/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          多线程
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/07/27/day18%20%E7%BB%A7%E6%89%BF/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">day18 继承</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/27/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/27/day19%20%E6%8B%B7%E8%B4%9D%20%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%92%8C%20socket/">day19 拷贝 内存管理和 socket</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/27/day18%20%E7%BB%A7%E6%89%BF/">day18 继承</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/27/day17%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">day17 面向对象</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/27/day16%20re%E6%A8%A1%E5%9D%97%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">day16 re模块和面向对象</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 sanguog<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

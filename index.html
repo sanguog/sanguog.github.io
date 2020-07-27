@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>sanguog的秘密基地</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="sanguog的秘密基地">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="sanguog的秘密基地">
+<meta property="og:locale" content="zh">
+<meta property="article:author" content="sanguog">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="sanguog的秘密基地" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">sanguog的秘密基地</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">冲冲冲！</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-多线程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/27/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="article-date">
+  <time datetime="2020-07-27T02:09:06.485Z" itemprop="datePublished">2020-07-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/27/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h1><h2 id="01-多线程"><a href="#01-多线程" class="headerlink" title="01 多线程"></a>01 多线程</h2><ol>
+<li><p>主线程</p>
+<p>每一个进程默认都有一个线程，这个线程叫主线程。默认情况下，所有的代码都是在主线程中运行的主线程以外的线程都叫子线程</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/27/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" data-id="ckd3vhql8000i6kuphz9aco98" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-day19 拷贝 内存管理和 socket" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/27/day19%20%E6%8B%B7%E8%B4%9D%20%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%92%8C%20socket/" class="article-date">
+  <time datetime="2020-07-27T02:09:06.394Z" itemprop="datePublished">2020-07-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/27/day19%20%E6%8B%B7%E8%B4%9D%20%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%92%8C%20socket/">day19 拷贝 内存管理和 socket</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#day19 拷贝 内存管理和 socket</p>
+<h2 id="01-拷贝"><a href="#01-拷贝" class="headerlink" title="01 拷贝"></a>01 拷贝</h2><p>不管怎么拷贝，都是复制原数据产生一个新的数据并且将新数据的地址返回</p>
+<h2 id="02-内存管理"><a href="#02-内存管理" class="headerlink" title="02 内存管理"></a>02 内存管理</h2><ol>
+<li><p>内存管理：python内存管理是自动化（指的是对堆上的内存进行管理）</p>
+</li>
+<li><p>内存的开辟</p>
+<p>需要保存数据的时候系统就会自动在堆上开辟内存空间保存数据。</p>
+<p>注意：如果需要被保存的数据是数字或者字符串，系统会先检查专门保存数字字符串的缓存区中是否已经存在这个数据，如果存在直接返回之前的数据的地址，不存在才会开辟新的内存去保存（短小数字和字符串）</p>
+</li>
+<li><p>内存的释放</p>
+<p>python中的每一个数据都有一个属性用来保存这个数据的引用个数（引用计数），当引用计数的值为0，那么这个数据就会自动销毁</p>
+</li>
+</ol>
+<h2 id="03-server"><a href="#03-server" class="headerlink" title="03 server"></a>03 server</h2><ol>
+<li><p>socket</p>
+<p>socket又叫套接字（实现通信的两端（程序）就是套接字）</p>
+<p>套接字有两种：服务器套接字（server）、客户端套接字（client）</p>
+</li>
+<li><p>服务器套接字</p>
+<ol>
+<li><p>创建socket对象（买电话机）</p>
+<p>socket（family，type） —— 创建一个套接字对象</p>
+<p>family —— IP的类型（ipv4, ipv6）；</p>
+<p>​                    AF_INET == ipv4(默认的)</p>
+<p>​                    AF_INET6 == ipv6</p>
+<p>type —— 传输协议（TCP、UDP)</p>
+<p>​                SOCK_STREAM == TCP</p>
+<p>​                SOCK_DGRAM == UDP</p>
+</li>
+<li><p>绑定ip和端口（插电话线）</p>
+<p>套接字对象.bind((ip地址，端口))</p>
+<p>ip地址 —— 找到服务器对应的计算机；字符串</p>
+<p>端口 —— 区分计算机中不同的服务（服务指的是正在运行的程序）值是整数，范围是0<del>65535（其中0</del>1023属于著名端口）</p>
+</li>
+<li><p>开始监听（等待别人打电话）</p>
+<p>服务器套接字对象.listen(数量) —— 数量决定了同一时间的最大通信数（能处理的客服端最大数量）</p>
+</li>
+<li><p>让服务器一直运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">while True:</span><br><span class="line">	1)接受客户端的请求（接电话）</span><br><span class="line">	connect, address &#x3D; server.accept()</span><br><span class="line">	print(&#39;aaaaaa&#39;)</span><br><span class="line">	2)接受消息</span><br><span class="line">	  recv(字节数) —— 接受数据（字节数——一次能接受的最大的数据）</span><br><span class="line">	re_data &#x3D; connect.recv(1024)</span><br><span class="line">	print(&#39;接受消息&#39;)</span><br><span class="line">	print(str(re_data, encoding&#x3D;&#39;utf-8&#39;))</span><br><span class="line">	3)发送数据</span><br><span class="line">	connect.send(bytes(&#39;你好&#39;, encoding&#x3D;&#39;utf-8&#39;))</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="04-client"><a href="#04-client" class="headerlink" title="04 client"></a>04 client</h2><ol>
+<li><p>创建套接字对象</p>
+</li>
+<li><p>连接服务器（拨号，打电话）</p>
+<p>client。connect((‘10.7.184.61’, 8082))</p>
+</li>
+<li><p>发送消息</p>
+<p>字符串.encode() —— 将转换成二进制数据</p>
+<p>client。send(‘你好吗？吃了吗？’)</p>
+<p>client.send(message.encode())</p>
+</li>
+<li><p>接受消息</p>
+<p>二进制数据.decode() —— 将二进制数据转换成字符串</p>
+<p>re_data = client.recv(1024)</p>
+<p>print(re_data.decode())</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/27/day19%20%E6%8B%B7%E8%B4%9D%20%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%92%8C%20socket/" data-id="ckd3vhql7000h6kupfxr847lc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-day18 继承" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/27/day18%20%E7%BB%A7%E6%89%BF/" class="article-date">
+  <time datetime="2020-07-27T02:09:06.392Z" itemprop="datePublished">2020-07-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/27/day18%20%E7%BB%A7%E6%89%BF/">day18 继承</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="day18-继承"><a href="#day18-继承" class="headerlink" title="day18 继承"></a>day18 继承</h1><h2 id="01-继承"><a href="#01-继承" class="headerlink" title="01 继承"></a>01 继承</h2><ol>
+<li><p>什么是继承</p>
+<p>让子类直接拥有父类的属性和方法的过程就是继承</p>
+<p>父类 —— 被继承者（又叫超类）</p>
+<p>子类 —— 继承者</p>
+</li>
+<li><p>怎么继承</p>
+<p>class 类名（父类1，父类2，……）：</p>
+<p>​        类的说明文档</p>
+<p>​        类的内容</p>
+<p>注意：默认情况下，自定义的类继承自 object</p>
+<p>继承的时候子类可以直接拥有父类的属性和方法</p>
+</li>
+<li><p>在子类中添加内容</p>
+<ol>
+<li><p>在子类中添加类属性和方法</p>
+<p>类属性和方法的添加不会因为继承而受到任何影响</p>
+</li>
+<li><p>添加对象属性</p>
+<p>对象属性是怎么被继承：继承的时候因为init方法被继承，简介继承了对象属性</p>
+<p>在子类的<code>__init__</code>方法中通过 super() 去调用父类的<code>__init__</code>方法</p>
+</li>
+<li><p>类中的方法的调用过程</p>
+<p>通过对象在调用方法的时候，会先看当前类中有没有这个方法，如果有就直接调用自己类中的方法；如果没有就看自己的父类有没有这个方法，如果父类定义了就调用父类的；父类没有定义，就看父类的父类中有没有定义……以此类推，如果  object 中没有会报错（多态）</p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="02-多继承"><a href="#02-多继承" class="headerlink" title="02 多继承"></a>02 多继承</h2><p>两个父类的类属性都可以继承<br>对象属性只会继承第一个父类</p>
+<p>两个父类的不同方法都可以继承</p>
+<p>super(类，类的对象) —— 获取指定类的父类（对象必须是类的对象：类默认指向当前类，对象默认是当前类）</p>
+<h2 id="03-运算符重载"><a href="#03-运算符重载" class="headerlink" title="03 运算符重载"></a>03 运算符重载</h2><ol>
+<li><p>运算符重载</p>
+<p>python中使用每一个运算符其本质都是在调用运算符对应的方法（每个运算符都会对应一个固定的方法）</p>
+<p>某种类型的数据支不支持某个运算符，就看这个数据对应的类型中有没有实现运算符对应的方法</p>
+<p>注意：大于符号和小于符号实现其中一个另外一个也可以用</p>
+</li>
+</ol>
+<h2 id="04-单列模式"><a href="#04-单列模式" class="headerlink" title="04 单列模式"></a>04 单列模式</h2><ol>
+<li>单列类</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/27/day18%20%E7%BB%A7%E6%89%BF/" data-id="ckd3vhql5000g6kupbjpf1qdp" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-day17 面向对象" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/27/day17%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" class="article-date">
+  <time datetime="2020-07-27T02:09:06.390Z" itemprop="datePublished">2020-07-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/27/day17%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">day17 面向对象</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="day17-面向对象"><a href="#day17-面向对象" class="headerlink" title="day17 面向对象"></a>day17 面向对象</h1><h2 id="01-类属性"><a href="#01-类属性" class="headerlink" title="01 类属性"></a>01 类属性</h2><ol>
+<li><p>类属性</p>
+<p>直接定义在类中的变量就是类属性</p>
+<p>类属性的值不会因为对象不同而不一样</p>
+</li>
+<li><p>对象属性</p>
+<p>通过 self.属性名 = 值 定义在 init 函数中的属性</p>
+<p>对象</p>
+</li>
+</ol>
+<h2 id="02-对象属性的增删改查"><a href="#02-对象属性的增删改查" class="headerlink" title="02 对象属性的增删改查"></a>02 对象属性的增删改查</h2><ol>
+<li><p>查（获取属性的值）</p>
+<p>对象.属性 —— 获取对象指定属性对应的值；属性不存在会报错</p>
+<p>getattr(对象，属性名) —— 获取对象指定属性对应的值；属性不存在会报错</p>
+<p>getattr(对象，属性名，默认值) —— 获取对象指定属性对应的值；属性不存在不会报错，并且返回默认值</p>
+</li>
+<li><p>改、增</p>
+<p>对象.属性 = 值 —— 当属性不存在就给对象添加属性，属性存在的时候就修改指定属性的值</p>
+<p>setattr(对象，属性名，值) —— 当属性不存在就给对象添加属性，属性存在的时候就修改指定属性的值</p>
+</li>
+<li><p>删</p>
+<p>del 对象.属性 —— 删除对象中指定的属性</p>
+<p>delattr(对象，属性名) —— 删除对象中指定的属性</p>
+</li>
+</ol>
+<h2 id="03-内置属性"><a href="#03-内置属性" class="headerlink" title="03 内置属性"></a>03 内置属性</h2><p>python在定义类的时候系统自动添加的属性（从基类中继承下来的属性）就是内置属性</p>
+<ol>
+<li><p><code>__module__</code><br>类属性；<br>类.<code>__module__</code> —— 获取定义的模块的模块名</p>
+</li>
+<li><p><code>__class__</code></p>
+<p>对象.<code>__class__</code> —— 获取对象对应的类</p>
+</li>
+<li><p><code>__name__</code></p>
+<p>类.<code>__name__</code> —— 获取类名</p>
+</li>
+<li><p><code>__dict__</code></p>
+<p>类.<code>__dict__</code> —— 将类转换成字典（类的类属性名作为key，类属性的值作为值）</p>
+<p>对象.<code>__dict__</code> —— 将对象转换成字典（对象属性名作为key，属性的值作为值）</p>
+</li>
+<li><p><code>__doc__</code></p>
+<p>类.<code>__doc__</code> —— 获取文档</p>
+</li>
+<li><p><code>__base__</code></p>
+<p>类.<code>__base__</code> —— 获取当前类的父类</p>
+<p>类.<code>__bases__</code> —— 获取当前所有的父类</p>
+</li>
+<li><p><code>__slots__</code> :可以约束当前类的对象能够拥有哪些对象属性</p>
+</li>
+<li><p>注意：如果给类属性<code>__slots__</code>赋值了，那么这个类的对象不能在使用<code>__dict__</code>属性</p>
+</li>
+</ol>
+<h2 id="04-私有化"><a href="#04-私有化" class="headerlink" title="04 私有化"></a>04 私有化</h2><ol>
+<li><p>访问权限</p>
+<p>公开的：在类的内部和外部都可以使用，也能被继承</p>
+<p>保护的：在类的内部可以使用，类的外部不能使用，可以被继承</p>
+<p>私有的：只能在类的内部使用，不能被继承</p>
+</li>
+</ol>
+<p>   严格来说，python中所有的属性和方法都是公开的，这儿说的私有化其实是假的私有化</p>
+<p>   用法：在要在私有化的变量（属性）前加_ _</p>
+<h2 id="05-getter和setter"><a href="#05-getter和setter" class="headerlink" title="05 getter和setter"></a>05 getter和setter</h2><ol>
+<li><p>getter和setter的作用</p>
+<p>getter作用：在获取某个属性值之前想要做别的事情，就给这个属性添加getter</p>
+<p>setter作用：在给属性赋值之前像要做别的事情，就给这个属性添加setter</p>
+</li>
+<li><p>怎么添加getter和setter</p>
+<ol>
+<li><p>getter</p>
+<p>第一步：在需要添加getter的属性名前加_</p>
+<p>第二步：定义getter对应的函数(1. 需要加@property装饰器 2.函数名就是不带下划线的属性名 3.函数需要一个返回值)</p>
+<p>第三步：获取属性值，通过：对象.不带_属性名（本质就是在调用getter对应的函数，取到的属性值就是函数的返回值）</p>
+</li>
+<li><p>setter</p>
+<p>如果想要给属性添加setter必须先给属性添加getter</p>
+<p>第一步：添加getter</p>
+<p>第二步：定义setter对应的函数（1.需要@getter函数名.setter 装饰器 2.函数名就是不带_的属性名 3.需要一个参数不需要返回值，这个参数就是尝试给属性赋得值）</p>
+<p>第三步：通过给属性赋值：对象.不带_属性名 = 值（本质就是在调用setter对应的函数）</p>
+</li>
+</ol>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/27/day17%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" data-id="ckd3vhql2000d6kup422n177i" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-day16 re模块和面向对象" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/27/day16%20re%E6%A8%A1%E5%9D%97%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" class="article-date">
+  <time datetime="2020-07-27T02:09:06.388Z" itemprop="datePublished">2020-07-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/27/day16%20re%E6%A8%A1%E5%9D%97%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">day16 re模块和面向对象</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="day16-re模块和面向对象"><a href="#day16-re模块和面向对象" class="headerlink" title="day16 re模块和面向对象"></a>day16 re模块和面向对象</h1><h2 id="01-re模块"><a href="#01-re模块" class="headerlink" title="01 re模块"></a>01 re模块</h2><ol>
+<li><p>re.compile()</p>
+<p>compile(正则表达式) —— 编译正则表达式，创建正则表达式对象</p>
+</li>
+<li><p>匹配</p>
+<ol>
+<li>fullmatch(正则表达式，字符串) —— 让整个字符串和正则表达式进行匹配</li>
+<li>match(正则表达式，字符串) —— 匹配字符串开头</li>
+</ol>
+</li>
+<li><p>匹配对象</p>
+<ol>
+<li>获取匹配到的字符串：    <ol>
+<li>匹配对象.group() —— 获取整个正则表达式匹配到的结果</li>
+<li>匹配对象.group(分组号) —— 获取正则表达式中指定的分组匹配到的结果</li>
+</ol>
+</li>
+<li>获取匹配到的子串的范围：匹配对象.span()</li>
+<li>获取原字符串：匹配对象.string</li>
+</ol>
+</li>
+<li><p>查找</p>
+<ol>
+<li>search(正则表达式，字符串) —— 在字符串中查找第一个能和字符串匹配的子串。如果找到了返回匹配对象，找不到返回None</li>
+<li>findall(正则表达式，字符串) —— 获取字符串中所有满足正则表达式的子串，返回的是一个列表，列表中的元素是字符串。findall正则中如果有分组，只获取分组匹配到的内容</li>
+<li>finditer(正则表达式，字符串) —— 获取字符串中所有满足正则表达式的子串。返回一个迭代器</li>
+</ol>
+</li>
+<li><p>切割</p>
+<p>split(正则表达式，字符串) —— 将字符串中能和正则表达式匹配的子串作为切割点，对字符串进行切割。返回值是列表，列表中的元素是字符串</p>
+<p>split(正则表达式，字符串，次数) —— 指定切割次数</p>
+</li>
+<li><p>替换</p>
+<p>sub(正则表达式，字符串1，字符串2) —— 将字符串2中能和正则表达式匹配的子串全部替换成字符串1</p>
+</li>
+</ol>
+<h2 id="02-编程思想"><a href="#02-编程思想" class="headerlink" title="02 编程思想"></a>02 编程思想</h2><p>面向过程编程（穷人的思想）：一遇到问题马上想到的是怎么写代码把这个功能实现</p>
+<p>函数式编程（小资的思想）：一遇到问题马上想到有没有一个函数已经把这个功能实现了，如果有就拿过来用，没有就定义一个有这个功能的函数</p>
+<p>面向对象编程（富豪的思想）：一遇到问题马上想到有没有一个类中有这个方法能够把这个功能实现，如果没有就创建这个类</p>
+<h2 id="03-类和对象"><a href="#03-类和对象" class="headerlink" title="03 类和对象"></a>03 类和对象</h2><ol>
+<li><p>什么是类，什么是对象</p>
+<p>类就是拥有相同属性和相同功能的对象的集合（抽象）</p>
+<p>对象就是类的实列（具体)</p>
+</li>
+<li><p>定义类（说清楚共同属性 和功能是哪些）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line">class 类名：</span><br><span class="line">	类的说明文档</span><br><span class="line">	类的内容（包含属性和方法）</span><br><span class="line">	</span><br><span class="line">说明：</span><br><span class="line">class - 关键字</span><br><span class="line">类名 - 自己命名</span><br><span class="line">	  要求：标识符，不能是关键字</span><br><span class="line">      规范：驼峰式命名，并且首字母大写；见名知义；不使用系统的函数名、类名、模块名</span><br><span class="line">类的说明文档 - 用&quot;&quot;&quot;&quot;&quot;&quot;引起来的说明性文字，主要说清楚类提供了哪些属性和哪些功能</span><br><span class="line">类的内容 - 主要包括属性和方法（定义在类中的函数叫方法）</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class Human:</span><br><span class="line">	def eat(self):</span><br><span class="line">		print(&#39;你吃了吗&#39;)</span><br><span class="line">		</span><br><span class="line">	def sleep(self):</span><br><span class="line">		print(&#39;睡觉&#39;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>定义对象（创建对象）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line">类名（）</span><br><span class="line"></span><br><span class="line">说明：</span><br><span class="line">类名 - 是已经创建好的类的类名</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">p1 &#x3D; Human()	#创建人类的对象p1</span><br><span class="line">p2 &#x3D; Human()</span><br><span class="line">print(p1)</span><br><span class="line">print(p2)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="04-方法"><a href="#04-方法" class="headerlink" title="04 方法"></a>04 方法</h2><ol>
+<li><p>方法</p>
+<p>类中的方法分为三种：对象方法、类方法、静态方法</p>
+<ul>
+<li><p>对象方法</p>
+<p>怎么定义：直接定义在类中的函数就是对象方法</p>
+<p>特点：自带参数 self（self在通过对象调用的时候不用传参，系统会自动将当前对象传给self），谁调用指向谁</p>
+<p>怎么调用：用对象去调用（对象.方法名()）</p>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p>类方法</p>
+<p>怎么定义：定义函数前加装饰器 @classmethod</p>
+<p>特点：自带参数 cls （cls在通过类调用的时候不用传参，系统会自动将当前对象传给cls），谁调用指向谁</p>
+<p>怎么调用：用类调用（类.方法名()）</p>
+</li>
+</ul>
+<ul>
+<li><p>静态方法</p>
+<p>怎么定义：定义函数前加装饰器 @staticmethod</p>
+<p>特点：没有默认参数</p>
+<p>怎么调用：用类调用</p>
+</li>
+</ul>
+<ul>
+<li><p>注意：从本质上讲，类型的所有的方法都可以用对象和类调用，但不能这么做</p>
+<p>如果用类调用对象方法，self就会变成普通的参数，没有存在的价值</p>
+</li>
+<li><p>三个方法怎么选</p>
+<p>如果实现函数的功能需要用到对象的属性，就选对象方法</p>
+</li>
+</ul>
+<h2 id="05-init方法"><a href="#05-init方法" class="headerlink" title="05 init方法"></a>05 init方法</h2><ol>
+<li><p>构造方法</p>
+<p>函数名和类名是一样的，用来创建对象的方法就是构造方法（python中的构造方法，在定义类的时候系统已经帮我们创建好了）</p>
+</li>
+<li><p>init方法</p>
+<p>_ _ init _ _ 方法又叫初始化方法，用来在创建对象的是对对象进行初始化操作的。</p>
+<p>当我们通过类创建对象的时候，系统会自动调用_ _ init _ _ 方法来对创建出来的对象进行初始化</p>
+<p>调用构造方法创建对象的时候需不需要参数，看_ _ init _ _方法</p>
+</li>
+</ol>
+<h2 id="06-对象属性"><a href="#06-对象属性" class="headerlink" title="06 对象属性"></a>06 对象属性</h2><ol>
+<li>属性：对象属性和类属性<ul>
+<li>对象属性：对象属性的值会因为对象不同而不一样<ul>
+<li>定义在_ _ init _ _方法中</li>
+<li>以 self.属性名 = 值</li>
+<li>通过 对象.属性名 的方式使用属性</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/27/day16%20re%E6%A8%A1%E5%9D%97%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" data-id="ckd3vhql4000f6kup3k7h56yg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-day15 异常和正则" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/27/day15%20%E5%BC%82%E5%B8%B8%E5%92%8C%E6%AD%A3%E5%88%99/" class="article-date">
+  <time datetime="2020-07-27T02:09:06.386Z" itemprop="datePublished">2020-07-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/27/day15%20%E5%BC%82%E5%B8%B8%E5%92%8C%E6%AD%A3%E5%88%99/">day15 异常和正则</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="day15-异常和正则"><a href="#day15-异常和正则" class="headerlink" title="day15 异常和正则"></a>day15 异常和正则</h1><h2 id="01-异常捕获"><a href="#01-异常捕获" class="headerlink" title="01 异常捕获"></a>01 异常捕获</h2><ol>
+<li><p>什么是异常捕获</p>
+<p>让程序执行过程中出现异常的时候不崩溃可以继续运行。</p>
+<p>注意：不是任何时候都要使用异常捕获，是在你明明知道某个位置可能会出现异常，又不想让程序崩溃的时候才使用</p>
+</li>
+<li><p>异常捕获的语法</p>
+<ol>
+<li><p>语法一：捕获所有异常</p>
+<p>try:</p>
+<p>​        代码段1（和try保持一个缩进的一条或者多条语句；可能会出现异常（需要捕获异常）的代码）</p>
+<p>except:</p>
+<p>​        代码段2（出现的异常被捕获到了，需要执行的代码）</p>
+<p>执行过程：先执行代码段1，如果执行过程中出现异常直接执行代码段2；否则代码段2不会执行</p>
+</li>
+</ol>
+</li>
+</ol>
+<ol start="2">
+<li><p>语法二：针对指定类型的异常进行捕获</p>
+<p>try:</p>
+<p>​        代码段1</p>
+<p>except  异常类型：</p>
+<p>​        代码段2</p>
+<p>执行过程：先执行代码段1，如果代码段1出现异常，判断出现的异常的类型和except后面的异常类型是否一致，如果一致程序不崩溃，执行代码段2，不一致程序直接崩溃</p>
+</li>
+</ol>
+<ol start="3">
+<li><p>语法三：同时捕获多种异常，针对不同的异常做相同的处理</p>
+<p>try:</p>
+<p>​        代码段1</p>
+<p>except（异常类型1，异常类型2，……）：</p>
+<p>​        代码段2</p>
+</li>
+</ol>
+<ol start="4">
+<li><p>语法四：同时捕获多种异常，针对不同的异常做不同的处理</p>
+<p>try:</p>
+<p>​        代码段1</p>
+<p>except 异常类型1：</p>
+<p>​        代码段11</p>
+<p>except  异常类型2：</p>
+<p>​        代码段22</p>
+<p>except 异常类型3：</p>
+<p>​        代码段33</p>
+</li>
+</ol>
+<ol start="3">
+<li><p>finally关键字</p>
+<p>在所有异常捕获的语法结构的后面都可以添加finally关键字：</p>
+<p>try:</p>
+<p>​        代码块1</p>
+<p>except：</p>
+<p>​        代码段2</p>
+<p>finally：</p>
+<p>​        代码段3（无论发生什么，都会执行）</p>
+</li>
+</ol>
+<h2 id="02-正则表达式"><a href="#02-正则表达式" class="headerlink" title="02 正则表达式"></a>02 正则表达式</h2><ol>
+<li><p>什么是正则表达式</p>
+<p>正则表达式是一种让字符串处理更简单的工具（本质是做字符串匹配）</p>
+</li>
+<li><p>正则表达式的语法</p>
+<p>from re import fullmatch：python提供的使用正则表达式的模块</p>
+<p>fullmatch(正则表达式，字符串) - 让正则表达式和字符串进行完全匹配，如果匹配失败结果是None</p>
+<p>js 的正则：/正则表达式/</p>
+<p>python 的正则：r ‘正则表达式’</p>
+<ul>
+<li><p>普通字符 - 表示字符本身</p>
+</li>
+<li><p>. —— 匹配一个任意字符</p>
+</li>
+<li><p>\w —— 匹配任意一个数字、字母或者下划线（针对ASCII码表有效）（不好用）</p>
+</li>
+<li><p>\d —— 匹配任意一个数字字符</p>
+</li>
+<li><p>\s —— 匹配任意一个空白字符（空格、制表和回车）</p>
+</li>
+<li><p>\字母 —— 小写字母和对应的大写字母的功能相反</p>
+</li>
+<li><p>[字符集] —— 匹配字符集中出现的任意一个字符</p>
+<p>注意:一个[]只能匹配一个字符</p>
+<p>[a-z] —— 匹配从字符a到字符z之间的任意一个字符（匹配任意一个小写字母）</p>
+<p>[a-zA-Z] —— 匹配任意一个字母</p>
+<p>[0-9] —— 匹配任意一个数字字符</p>
+<p>[\u4e00-\u9fa5] —— 匹配任意一个中文字符</p>
+</li>
+<li><p>[^字符集] —— 取任意一个不在字符集中的一个字符</p>
+</li>
+</ul>
+</li>
+<li><p>检测符号</p>
+<ul>
+<li><p>\b —— 检测是否是单词的边界<br>单词边界：字符串开头、字符串结尾、凡是能区分出两个不同单词的符号</p>
+<p>注意：检测类的符号不影响匹配的长度，只是在匹配成功的时候做进一步的检测</p>
+</li>
+<li><p>^ —— 检测^所在的位置是否是字符串开头</p>
+</li>
+<li><p>$ —— 检测所在的位置是否是字符串结尾</p>
+</li>
+</ul>
+</li>
+<li><p>匹配次数</p>
+<ul>
+<li>字符* ——字符出现0次或多次</li>
+<li>字符+ ——匹配1次或多次（至少一次）</li>
+<li>字符？—— 匹配0次或1次</li>
+</ul>
+</li>
+<li><p>{}语法</p>
+<ul>
+<li>{N} —— 匹配N次</li>
+<li>{M, N} —— 匹配M到N次</li>
+<li>{M，} —— 匹配至少M次</li>
+<li>{， N}—— 匹配最多N次（0~N）次</li>
+</ul>
+</li>
+<li><p>贪婪和非贪婪</p>
+<p>在匹配次数不确定的情况下，匹配模式分为两种：贪婪和非贪婪</p>
+<ol>
+<li>贪婪：默认都是贪婪的（在能匹配到的前提下匹配次数尽可能多）</li>
+<li>非贪婪：在匹配次数不确定的时候，次数后面加问号，匹配就是非贪婪的（在能匹配到的前提下匹配下匹配尽可能少）</li>
+</ol>
+</li>
+<li><p>正则表达式最前面加 (?i) 表示匹配时忽略大小写</p>
+</li>
+<li><p>单行 (?s) 和多行 (?m) 匹配：在多行匹配时 . 不能和 \n 进行匹配，单行可以</p>
+</li>
+</ol>
+<h2 id="03-分支和分组"><a href="#03-分支和分组" class="headerlink" title="03 分支和分组"></a>03 分支和分组</h2><ol>
+<li><p>分支 |</p>
+<p>正则1|正则2|正则3|……</p>
+</li>
+<li><p>分组：（）</p>
+<ol>
+<li>整体操作</li>
+<li>重复：\N —— 重复前面第N个分组匹配到的内容（N从1开始）</li>
+<li>捕获</li>
+</ol>
+<p>转义符号：在具有特殊功能或者特殊意义的符号前加\，让功能消失</p>
+<p>注意：独立存在有特殊功能的符号在[]中功能会自动消失</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/27/day15%20%E5%BC%82%E5%B8%B8%E5%92%8C%E6%AD%A3%E5%88%99/" data-id="ckd3vhql3000e6kup1kvgcux1" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-day14 文件操作" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/27/day14%20%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" class="article-date">
+  <time datetime="2020-07-27T02:09:06.383Z" itemprop="datePublished">2020-07-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/27/day14%20%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">day14 文件操作</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="day14-文件操作"><a href="#day14-文件操作" class="headerlink" title="day14 文件操作"></a>day14 文件操作</h1><h2 id="01-文件操作"><a href="#01-文件操作" class="headerlink" title="01 文件操作"></a>01 文件操作</h2><ol>
+<li><p>计算机数据的存储</p>
+<p>计算机的存储系统分为 运行内存 和 硬盘 两种</p>
+<p>运行内存：用来保存程序运行过程中产生的数据，程序运行结束后会自动销毁</p>
+<p>硬盘：硬盘是用来保存文件的，保存在文件中的数据就是保存在硬盘中的。除非手动删除，否则数据会一直存在</p>
+</li>
+<li><p>数据持久化</p>
+<p>数据持久化就是将数据以各种形式保存到硬盘中（保存到本地文件中）</p>
+</li>
+<li><p>文件操作</p>
+<ol>
+<li><p>文件操作基本步骤：打开文件 -&gt; 操作文件（读、写） -&gt; 关闭文件</p>
+<ul>
+<li><p>打开文件</p>
+<p>open(file, mode=’r’, encoding=None) - 以指定的模式打开指定文件并且返回一个文件对象</p>
+<p>说明：</p>
+<ul>
+<li><p>file - 文件路径，字符串类型</p>
+<p>绝对路径 ；文件/文件夹的全路径(一般不写)</p>
+<p>相对路径：只写文件绝对路径的一部分，另外一部分用特殊符号代替</p>
+<p>./ - 表示当前路径，可以省略</p>
+<p>../ - 表示当前目录的上层目录</p>
+</li>
+<li><p>mode - 打开方式，字符串类型</p>
+<p>第一组：控制操作类型</p>
+<p>r - 以只读的形式打开文件（默认值）</p>
+<p>w - 以只写的形式打开文件；打开前会先清空原文件中的内容</p>
+<p>a - 以只写的方式打开文件</p>
+<p>第二组：控制数据类型（文本 - str / 二进制数据 - bytes）</p>
+<p>t - 操作的数据是文本数据（默认值）</p>
+<p>b - 操作的数据是二进制数据</p>
+<p>注意：每一组只选一个，两组值进行组合使用</p>
+</li>
+<li><p>encoding - 文本编码方式；一般写’utf-8’</p>
+<p>注意：如果打开方式中带 b ，不能设置 encoding</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="02-文件的读写操作"><a href="#02-文件的读写操作" class="headerlink" title="02 文件的读写操作"></a>02 文件的读写操作</h2><ul>
+<li><p>打开文件方式一：</p>
+<p>文件对象 = open （文件路径，文件打开方式，encoding=文本编码方式）</p>
+<p>操作文件对象</p>
+<p>文件对象.close()</p>
+</li>
+<li><p>打开文件方式二</p>
+<p>with open(文件路径，文件打开方式，encoding=文本编码方式) as 文件对象：</p>
+<p>​    操作文件对象</p>
+</li>
+</ul>
+<ol start="2">
+<li><p>文件读操作</p>
+<ol>
+<li>文件对象.read() - 从文件读写位置开始，读到文件的结尾（默认情况下读写位置在文件开头）</li>
+<li>文件对象.readline() - 读文本文件的一行内容（从当前读写位置读到一行结束）</li>
+<li>文件对象.readlines() - 一行一行的读，读完为止。返回的是一个列表，列表中的元素是每一行的内容</li>
+</ol>
+</li>
+<li><p>写操作</p>
+<p>文件对象.write（内容）</p>
+</li>
+<li><p>注意：如果以读的方式打开一个不存在的文件，程序会报错。如果是以写的方式打开一个不存在的文件，不会报错并会新建这个文件夹</p>
+</li>
+</ol>
+<h2 id="04-数据持久化"><a href="#04-数据持久化" class="headerlink" title="04 数据持久化"></a>04 数据持久化</h2><ol>
+<li>数据持久化的基本操作<ol>
+<li>数据保存在文件中</li>
+<li>需要数据的时候从文件中去读数据</li>
+<li>当数据发生改变的时候，将保存数据的文件进行更新</li>
+</ol>
+</li>
+<li>字典和列表的数据持久化<ol>
+<li>字典和列表的写操作：先将列表或者字典转换成字符串</li>
+<li>字典和列表的读操作：将容器格式的字符串转换成对应的容器型数据类型（eval）</li>
+</ol>
+</li>
+</ol>
+<h2 id="05-json数据"><a href="#05-json数据" class="headerlink" title="05 json数据"></a>05 json数据</h2><ol>
+<li><p>什么是json</p>
+<ol>
+<li><p>存在的意义</p>
+<p>json就是不同编程语言之间进行数据交流的一种通用格式</p>
+</li>
+<li><p>概念</p>
+<p>json是一种数据格式：1.一个json有且只有一个数据 2.这个数据是json是支持的数据类型的数据</p>
+</li>
+<li><p>json支持的数据类型：数字类型、字符串、布尔、数组/列表、字典/对象、null/None</p>
+<ol>
+<li>数字类型：所有的数字</li>
+<li>字符串：用双引号引起来的文本数据（支持转义字符） - 必须是双引号</li>
+<li>布尔：只有 true 和 false 两个值</li>
+<li>数组：相当于python的列表</li>
+<li>字典：相当于python的字典，注意：key只能是字符串</li>
+<li>空值：null（相当于None）</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>json 转 python</p>
+<table>
+<thead>
+<tr>
+<th align="center">json</th>
+<th align="center">python</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">字符串</td>
+<td align="center">数字（int/float)</td>
+</tr>
+<tr>
+<td align="center">数字类型</td>
+<td align="center">字符串（可能会将双引号变成单引号）</td>
+</tr>
+<tr>
+<td align="center">布尔</td>
+<td align="center">布尔（小写变大写）</td>
+</tr>
+<tr>
+<td align="center">数组</td>
+<td align="center">列表</td>
+</tr>
+<tr>
+<td align="center">字典</td>
+<td align="center">字典</td>
+</tr>
+<tr>
+<td align="center">空值</td>
+<td align="center">null -&gt; None</td>
+</tr>
+</tbody></table>
+<p>json.loads(字符串) - 将json格式的字符串转换成python对应的数据。（这儿的字符串的内容必须满足json格式）</p>
+</li>
+<li><p>python 转 json</p>
+<table>
+<thead>
+<tr>
+<th>python</th>
+<th align="center">json</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>int/float</td>
+<td align="center">数字</td>
+</tr>
+<tr>
+<td>字符串</td>
+<td align="center">变成双引号的字符串</td>
+</tr>
+<tr>
+<td>布尔</td>
+<td align="center">布尔（大写变小写）</td>
+</tr>
+<tr>
+<td>列表/元组</td>
+<td align="center">数组</td>
+</tr>
+<tr>
+<td>字典</td>
+<td align="center">字典</td>
+</tr>
+<tr>
+<td>None</td>
+<td align="center">null</td>
+</tr>
+</tbody></table>
+<p>json.dumps(数据) - 将指定的python数据转换成json格式的字符串</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/27/day14%20%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" data-id="ckd3vhqkw000b6kup406se1j3" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-day13 迭代器生成器和模块" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/27/day13%20%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%94%9F%E6%88%90%E5%99%A8%E5%92%8C%E6%A8%A1%E5%9D%97/" class="article-date">
+  <time datetime="2020-07-27T02:09:06.381Z" itemprop="datePublished">2020-07-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/27/day13%20%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%94%9F%E6%88%90%E5%99%A8%E5%92%8C%E6%A8%A1%E5%9D%97/">day13 迭代器生成器和模块</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#day13 迭代器生成器和模块</p>
+<h2 id="01-迭代器"><a href="#01-迭代器" class="headerlink" title="01 迭代器"></a>01 迭代器</h2><ol>
+<li><p>什么是迭代器（iter）</p>
+<p>迭代器是容器型数据类型，只能通过类型转换和生成器来获得迭代器对象</p>
+<ul>
+<li>迭代器存储数据的特点：同时可以保存多个数据，没有办法直接查看，而是需要先将数据从迭代器中取出来（取出来之后不能再放回去）</li>
+<li>所有的容器都可以转换成迭代器</li>
+</ul>
+</li>
+<li><p>获取迭代器中的元素</p>
+<p>无论通过什么样的方式，只要将迭代器中的某个元素拿到了（看到了），那么这个元素在迭代中就不存在了</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">iter1 = iter([<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">7</span>])</span><br><span class="line">list1 = list(iter1)</span><br><span class="line">print(list1)</span><br><span class="line">list2 = list(iter1)</span><br><span class="line">print(list2)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>遍历</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">iter5 = iter(<span class="string">'hello!'</span>)</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> iter5:</span><br><span class="line">	print(<span class="string">f'x:<span class="subst">&#123;x&#125;</span>'</span>)</span><br><span class="line">print(list(iter5))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取单个元素</p>
+<p>next（迭代器对象） - 获取迭代器中的一个元素（当前最前面的那个元素）</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="02-生成器"><a href="#02-生成器" class="headerlink" title="02 生成器"></a>02 生成器</h2><ol>
+<li><p>什么是生成器</p>
+<ol>
+<li>生成器就是迭代器</li>
+<li>调用一个带有 yield 关键字的函数就可以得到一个生成器</li>
+</ol>
+</li>
+<li><p>生成器产生数据（生成器中的元素怎么产生的）</p>
+<p>生成器能生成多少数据就看执行生成器对应的函数的函数体会遇到几次 yield；yield 后面表达式的值就是生成器能够产生的数据</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_gender1</span><span class="params">()</span>:</span></span><br><span class="line">	<span class="keyword">yield</span> <span class="number">10</span></span><br><span class="line">	<span class="keyword">yield</span> <span class="number">100</span></span><br><span class="line">	<span class="keyword">yield</span> </span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">gen1 = create_gender1()</span><br><span class="line">print(list(gen1))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成器产生数据的原理</p>
+<p>当获取生成器元素的时候，会自动调用生成器关联的函数。第一次从函数开始的地方开始执行，直到遇到 yield 为止，并且将 yield 后面的值作为获取到的数据，后面每次都是从上一次结束的位置开始执行，直到遇到 yield 。如果从开始执行到函数结束都没有遇到 yield 就不会产生数据（如果是用 next 去取的数据这个时候会报错）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gender2</span><span class="params">()</span>:</span></span><br><span class="line">	<span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">100</span>, <span class="number">150</span>):</span><br><span class="line">		print(<span class="string">'===='</span>)</span><br><span class="line">		<span class="keyword">yield</span> x</span><br><span class="line">gen2 = gender2()</span><br><span class="line">print(next(gen2))</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#练习：写一个产生4位验证码的生成器（验证码由随机的4位数字和字母组成）</span></span><br><span class="line"><span class="keyword">from</span> rmodom improt romdint</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gender3</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<h2 id="03-生成式"><a href="#03-生成式" class="headerlink" title="03 生成式"></a>03 生成式</h2><ol>
+<li><p>生成式</p>
+<p>生成式就是生成器的简写</p>
+<p>列表推导式的[]变成了()就变成了生成式</p>
+</li>
+</ol>
+<h2 id="04-模块"><a href="#04-模块" class="headerlink" title="04 模块"></a>04 模块</h2><ol>
+<li><p>什么是模块</p>
+<p>一个模块就是一个py文件，py文件的文件名就是模块名</p>
+</li>
+<li><p>在一个模块中使用另一个模块的内容</p>
+<ol>
+<li>哪些能用：所有在指定if语句外的全局变量</li>
+<li>怎么使用：需要先导入模块<ul>
+<li>import 模块名 - 导入后可以使用所有的全局变量；以‘模块名.变量’来使用变量</li>
+<li>from 模块名 import 变量1，变量2， 变量3，…… —— 导入后可以直接使用变量</li>
+<li>from 模块名 import * —— 导入后可以使用所有的全局变量；可以直接使用（不推荐使用）</li>
+<li>import 模块名 as 新模块名 —— 导入模块的时候给模块取别名，以后使用模块的时候使用新名字</li>
+<li>from 模块名 import 变量1 as 新变量1</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="05-导入模块的原理"><a href="#05-导入模块的原理" class="headerlink" title="05 导入模块的原理"></a>05 导入模块的原理</h2><ol>
+<li><p>导入模块的原理</p>
+<p>当使用 import 或者 from import 导入模块的时候，系统会自动将被导入的模块中所有的代码都执行一遍</p>
+</li>
+<li><p>重复导入同一个模块，模块中的内容只会执行一次</p>
+</li>
+<li><p>怎么选择性的执行被导入的内容</p>
+<p>在被导入的模块中添加if语句，将不希望被其他模块执行的代码放到if语句中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">if 语句：</span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">	不希望被其他模块执行的代码</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">原理：</span><br><span class="line">每个模块都有一个属性：__name__，这个属性是用来保存当前模块的名字。__name__默认值就是模块名（模块对应的py文件的文件名）。当我们直接在执行某个模块的时候，这个模块的__name__属性就会自动变成&#39;__main__&#39;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<h2 id="06-包的使用"><a href="#06-包的使用" class="headerlink" title="06 包的使用"></a>06 包的使用</h2><ol>
+<li><p>什么是包</p>
+<p>包就是一种特殊的文件夹</p>
+<ol>
+<li>里面的文件都是py文件</li>
+<li>自带一个_ _ <em>init</em> _ _.py 的文件</li>
+</ol>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/27/day13%20%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%94%9F%E6%88%90%E5%99%A8%E5%92%8C%E6%A8%A1%E5%9D%97/" data-id="ckd3vhqkx000c6kup6sqy3245" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-day12 三大神器" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/27/day12%20%E4%B8%89%E5%A4%A7%E7%A5%9E%E5%99%A8/" class="article-date">
+  <time datetime="2020-07-27T02:09:06.379Z" itemprop="datePublished">2020-07-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/27/day12%20%E4%B8%89%E5%A4%A7%E7%A5%9E%E5%99%A8/">day12 三大神器</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="day12-三大神器"><a href="#day12-三大神器" class="headerlink" title="day12 三大神器"></a>day12 三大神器</h1><h2 id="01-高阶函数"><a href="#01-高阶函数" class="headerlink" title="01 高阶函数"></a>01 高阶函数</h2><p>1.函数就是变量（**）</p>
+<p>​        python中定义函数其实就是定义一个类型是 function 的变量，函数名就是变量名</p>
+<p>2.高阶函数</p>
+<ul>
+<li><p><strong>实参高阶函数</strong>：参数是函数的函数就是实参高阶函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func3</span><span class="params">(x)</span></span></span><br><span class="line"><span class="function">	<span class="title">print</span><span class="params">(x<span class="params">(<span class="number">1</span>, <span class="number">2</span>)</span>)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">func3</span><span class="params">(lambda m, n: m + n)</span></span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>系统提供的常见的实参高阶函数</p>
+<ul>
+<li><p>max</p>
+</li>
+<li><p>min</p>
+</li>
+<li><p>sorted</p>
+<p>都是实参高阶函数，有一个参数key需要传一个函数；被传入的函数需要一个参数和一个返回值，这个参数指向的是序列中的元素，返回值是比较对象</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list2  = [<span class="number">19</span>, <span class="number">90</span>, <span class="number">78</span>, <span class="number">52</span>]</span><br><span class="line">print(max(list2, key = <span class="keyword">lambda</span> item:item % <span class="number">10</span>))</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">student2 = [</span><br><span class="line">	&#123;<span class="string">'name'</span>: <span class="string">'张三'</span>, <span class="string">'age'</span>: <span class="number">18</span>, <span class="string">'score'</span>: <span class="number">89</span>&#125;,</span><br><span class="line">	&#123;<span class="string">'name'</span>: <span class="string">'小明'</span>, <span class="string">'age'</span>: <span class="number">29</span>, <span class="string">'score'</span>: <span class="number">60</span>&#125;,</span><br><span class="line">	&#123;<span class="string">'name'</span>: <span class="string">'李四'</span>, <span class="string">'age'</span>: <span class="number">25</span>, <span class="string">'score'</span>: <span class="number">90</span>&#125;,</span><br><span class="line">	&#123;<span class="string">'name'</span>: <span class="string">'Tom'</span>, <span class="string">'age'</span>: <span class="number">19</span>, <span class="string">'score'</span>: <span class="number">87</span>&#125;</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">a = max(student2, key=<span class="keyword">lambda</span> item: item[<span class="string">'score'</span>])</span><br><span class="line">print(a[<span class="string">'name'</span>])</span><br><span class="line">b = min(student2, key=<span class="keyword">lambda</span> item:item[<span class="string">'age'</span>])</span><br><span class="line">print(b[<span class="string">'name'</span>])</span><br><span class="line">c = sorted(student2,key= <span class="keyword">lambda</span> item:item[<span class="string">'age'</span>])</span><br><span class="line">print(c)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>map函数</p>
+<p>map(函数，序列) - 将序列中所有的元素按照函数指定的规则进行转换，返回的是map的对象（map就是容器型数据的一种）。</p>
+<p>函数需要一个参数和一个返回值，参数指向的是序列中的元素，返回值就是用来替换原来元素的新元素</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">      list3 = [<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>]</span><br><span class="line">      a = map(<span class="keyword">lambda</span> item:item+<span class="number">1</span>, list3)</span><br><span class="line">      print(list(a))</span><br><span class="line">      b = map(str, list3)</span><br><span class="line">print(list(b))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>reduce(函数，序列，初始值) - 对序列中的元素进行累积的操作</p>
+<p>函数需要两个参数指向前两个元素，第一个参数开始指向初始值，需要一个返回值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line">list3 = [<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>]</span><br><span class="line">result = reduce(<span class="keyword">lambda</span> x, y:x+y, list3)</span><br><span class="line">print(result)</span><br><span class="line"></span><br><span class="line">students = [</span><br><span class="line">	&#123;<span class="string">'name'</span>: <span class="string">'张三'</span>, <span class="string">'age'</span>: <span class="number">18</span>, <span class="string">'score'</span>: <span class="number">89</span>&#125;,</span><br><span class="line">	&#123;<span class="string">'name'</span>: <span class="string">'小明'</span>, <span class="string">'age'</span>: <span class="number">29</span>, <span class="string">'score'</span>: <span class="number">60</span>&#125;,</span><br><span class="line">	&#123;<span class="string">'name'</span>: <span class="string">'李四'</span>, <span class="string">'age'</span>: <span class="number">25</span>, <span class="string">'score'</span>: <span class="number">90</span>&#125;,</span><br><span class="line">	&#123;<span class="string">'name'</span>: <span class="string">'Tom'</span>, <span class="string">'age'</span>: <span class="number">19</span>, <span class="string">'score'</span>: <span class="number">87</span>&#125;</span><br><span class="line">]</span><br><span class="line">result = reduce(<span class="keyword">lambda</span> x, y:x+y[<span class="string">'score'</span>], students,<span class="number">0</span>)</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>返回值高阶函数</strong>：返回值是函数的函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func1</span><span class="params">()</span>:</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">func2</span><span class="params">(x,y)</span>:</span></span><br><span class="line">		<span class="keyword">return</span> x + y</span><br><span class="line">	<span class="keyword">return</span> func2</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h2 id="02-装饰器"><a href="#02-装饰器" class="headerlink" title="02 装饰器"></a>02 装饰器</h2><ol>
+<li><p>装饰器的作用</p>
+<p>在不修改函数的情况下给函数添加新的功能</p>
+</li>
+<li><p>什么是装饰器</p>
+<p>装饰器的本质就是一个函数（这个函数是一个实参高阶函数，也是返回值高阶函数）</p>
+<ol>
+<li>无参装饰器的写法：</li>
+</ol>
+</li>
+</ol>
+<pre><code>def 函数名1(函数名2):
+
+​        def 函数名3(*args, **kwargs):
+
+​                新功能代码
+
+​                返回值 = 函数名2(*args, **kwargs)
+
+​                return 返回值
+
+​        return 函数名3
+
+
+
+说明：
+
+函数名1 - 装饰器名字，命名的时候和这个装饰器要添加的功能进行关联
+
+函数名2 - 随便命名，指向被添加功能的函数；可以命名成fn
+
+函数名3 - 随便命名，在原函数上添加完新的功能以后产生的新的函数
+
+新功能代码 - 实现新加的功能的代码
+
+*args 和 **kwargs 同时存在的意义 - 不定参数的函数在调用的时候既可以使用位置参数也可以使用关键字参数
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">def str_func(fn):</span><br><span class="line">	def new_fn(*args, **kwargs):</span><br><span class="line">		print(&#39;开始函数&#39;)</span><br><span class="line">		result &#x3D; fn(*args, **kwargs)</span><br><span class="line">		return result</span><br><span class="line">	return new_fn</span><br><span class="line"></span><br><span class="line">@str_func</span><br><span class="line">def 1sum(num1, num2):</span><br><span class="line">	print(num1+num2)</span><br></pre></td></tr></table></figure></code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/27/day12%20%E4%B8%89%E5%A4%A7%E7%A5%9E%E5%99%A8/" data-id="ckd3vhqku000a6kuphv7e2mly" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-day11 函数进阶" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/27/day11%20%E5%87%BD%E6%95%B0%E8%BF%9B%E9%98%B6/" class="article-date">
+  <time datetime="2020-07-27T02:09:06.377Z" itemprop="datePublished">2020-07-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/27/day11%20%E5%87%BD%E6%95%B0%E8%BF%9B%E9%98%B6/">day11 函数进阶</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#day11 函数进阶</p>
+<h2 id="01-函数的返回值"><a href="#01-函数的返回值" class="headerlink" title="01 函数的返回值"></a>01 函数的返回值</h2><ul>
+<li><p>什么是返回值</p>
+<p>​    返回值就是 return 关键字后面的表达式的值    </p>
+<p>​    返回值是从函数里面传递到函数外面的数据</p>
+</li>
+</ul>
+<p>  ​    <strong>语法</strong>：</p>
+<p>  ​                return 表达式1，表达式2，……</p>
+<p>  ​    <strong>说明</strong>：</p>
+<p>  ​                return - 关键字，只能出现在函数体中</p>
+<p>  ​                a.将数据从函数内容扔到函数的外部        b.结束函数（执行函数的时候只要遇到return函数直接结束）</p>
+<p>  ​    <strong>表达式</strong> - 可以一个都没有（相当于None），可以有一个（返回值就是指定数据），也可以有多个（本质返回的是一个元组）</p>
+<p>  ​    <strong>注意：如果一个函数中没有return（或者执行函数体的时候没有遇到return）那么返回None</strong></p>
+<ul>
+<li><p>怎么在外部使用返回值返回的值</p>
+<p>​    普通数据能做的事函数调用表达式也能做</p>
+</li>
+</ul>
+<ul>
+<li><p>函数调用过程</p>
+<p>​    第一步：回到函数定义的位置</p>
+<p>​    第二步：传参（用实参给形参赋值；传参的时候必须保证每个参数都有值）</p>
+<p>​    第三步：执行函数体</p>
+<p>​    第四步：确定返回值（执行完函数体（a.自然死亡；b.遇到return）</p>
+<p>​    第五步：回到函数调用的位置接着往后执行（这个时候函数调用表达式的值就是函数的值） </p>
+</li>
+</ul>
+<ul>
+<li><p>什么时候需要返回值（初学者）</p>
+<p>​    看实现函数的功能会不会产生新的数据，如果产生了新的数据，就将新的数据作为返回值返回</p>
+</li>
+</ul>
+<p>​        </p>
+<h2 id="02-全局变量和局部变量"><a href="#02-全局变量和局部变量" class="headerlink" title="02 全局变量和局部变量"></a>02 全局变量和局部变量</h2><p>1.函数调用过程中内存的变化</p>
+<p>​        每次在调用函数的时候，系统会自动为这个函数创建一个独立的栈区间，用来保存函数运行过程中产生的数据（函数的参数；函数中声明的变量）；当函数调用结束后这个栈区间会自动销毁（压栈）</p>
+<p>2.全局变量和局部变量</p>
+<ul>
+<li><p>全局变量</p>
+<p>​        没有定义在函数里面或者类里面的变量就是全局变量</p>
+<p>​        作用域:从定义开始到程序结束的任意位置</p>
+</li>
+<li><p>局部变量</p>
+<p>​        定义在函数中的变量就是局部变量（形参是局部变量，注意：定义函数的时候给形参赋的默认值其实是保存在堆里面）</p>
+<p>​        作用域：从定义开始到函数结束的任何位置都可以使用</p>
+</li>
+<li><p>global 和 nonlocal</p>
+<ul>
+<li><p>global：在函数中声明指定的变量是全局变量</p>
+<p>作用：1.在函数中修改全局变量的值    2.在函数中定义一个全局变量</p>
+<p>注意：声明必须放在使用变量前</p>
+</li>
+<li><p>nonlocal：如果希望在局部的局部中去修改局部变量的值，就可以用 nonlocal 进行说明</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="03-匿名函数"><a href="#03-匿名函数" class="headerlink" title="03 匿名函数"></a>03 匿名函数</h2><ul>
+<li><p>什么是匿名函数</p>
+<p>匿名函数本质还是函数，普通函数中除了定义的语法其他全适用于匿名函数</p>
+</li>
+<li><p>定义匿名函数的语法：</p>
+<p>lambda 形参列表：返回值</p>
+<p>说明：</p>
+<p>​        lambda - 关键字，固定写法</p>
+<p>​        形参列表 - ‘形参1，形参2，……’ 的形式存在</p>
+<p>​        返回值 - 写任何有结果的表达式</p>
+</li>
+<li><p>调用匿名函数：函数变量（实参列表）</p>
+<p>匿名函数的本质就是类型是function的数据，普通数据能做的它都能做</p>
+</li>
+</ul>
+<h2 id="04-递归函数"><a href="#04-递归函数" class="headerlink" title="04 递归函数"></a>04 递归函数</h2><p>1.什么是递归函数</p>
+<p>​        在函数内调用函数本身的函数就是递归函数（自己调用自己）<br>​        循环能做的事递归都可以做</p>
+<p>2.怎么使用递归</p>
+<p>​    第一步：确定临界值（在临界值的位置结束函数）</p>
+<p>​    第二步：找关系（找当次循环 f(n) 和上一次循环（f(n-1）之间的关系）</p>
+<p>​    第三步：假设函数的功能已经实现，用f(n-1)去实现f(n)的功能</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/27/day11%20%E5%87%BD%E6%95%B0%E8%BF%9B%E9%98%B6/" data-id="ckd3vhqkt00096kupabbqaw6a" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/27/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/27/day19%20%E6%8B%B7%E8%B4%9D%20%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%92%8C%20socket/">day19 拷贝 内存管理和 socket</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/27/day18%20%E7%BB%A7%E6%89%BF/">day18 继承</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/27/day17%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">day17 面向对象</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/27/day16%20re%E6%A8%A1%E5%9D%97%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">day16 re模块和面向对象</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 sanguog<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

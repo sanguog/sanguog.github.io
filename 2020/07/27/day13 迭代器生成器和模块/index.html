@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>day13 迭代器生成器和模块 | sanguog的秘密基地</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="#day13 迭代器生成器和模块 01 迭代器 什么是迭代器（iter） 迭代器是容器型数据类型，只能通过类型转换和生成器来获得迭代器对象  迭代器存储数据的特点：同时可以保存多个数据，没有办法直接查看，而是需要先将数据从迭代器中取出来（取出来之后不能再放回去） 所有的容器都可以转换成迭代器   获取迭代器中的元素 无论通过什么样的方式，只要将迭代器中的某个元素拿到了（看到了），那么这个元素在迭代">
+<meta property="og:type" content="article">
+<meta property="og:title" content="day13 迭代器生成器和模块">
+<meta property="og:url" content="http://yoursite.com/2020/07/27/day13%20%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%94%9F%E6%88%90%E5%99%A8%E5%92%8C%E6%A8%A1%E5%9D%97/index.html">
+<meta property="og:site_name" content="sanguog的秘密基地">
+<meta property="og:description" content="#day13 迭代器生成器和模块 01 迭代器 什么是迭代器（iter） 迭代器是容器型数据类型，只能通过类型转换和生成器来获得迭代器对象  迭代器存储数据的特点：同时可以保存多个数据，没有办法直接查看，而是需要先将数据从迭代器中取出来（取出来之后不能再放回去） 所有的容器都可以转换成迭代器   获取迭代器中的元素 无论通过什么样的方式，只要将迭代器中的某个元素拿到了（看到了），那么这个元素在迭代">
+<meta property="og:locale" content="zh">
+<meta property="article:published_time" content="2020-07-27T02:09:06.381Z">
+<meta property="article:modified_time" content="2020-06-24T09:24:51.802Z">
+<meta property="article:author" content="sanguog">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="sanguog的秘密基地" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">sanguog的秘密基地</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">冲冲冲！</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-day13 迭代器生成器和模块" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/27/day13%20%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%94%9F%E6%88%90%E5%99%A8%E5%92%8C%E6%A8%A1%E5%9D%97/" class="article-date">
+  <time datetime="2020-07-27T02:09:06.381Z" itemprop="datePublished">2020-07-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      day13 迭代器生成器和模块
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#day13 迭代器生成器和模块</p>
+<h2 id="01-迭代器"><a href="#01-迭代器" class="headerlink" title="01 迭代器"></a>01 迭代器</h2><ol>
+<li><p>什么是迭代器（iter）</p>
+<p>迭代器是容器型数据类型，只能通过类型转换和生成器来获得迭代器对象</p>
+<ul>
+<li>迭代器存储数据的特点：同时可以保存多个数据，没有办法直接查看，而是需要先将数据从迭代器中取出来（取出来之后不能再放回去）</li>
+<li>所有的容器都可以转换成迭代器</li>
+</ul>
+</li>
+<li><p>获取迭代器中的元素</p>
+<p>无论通过什么样的方式，只要将迭代器中的某个元素拿到了（看到了），那么这个元素在迭代中就不存在了</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">iter1 = iter([<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">7</span>])</span><br><span class="line">list1 = list(iter1)</span><br><span class="line">print(list1)</span><br><span class="line">list2 = list(iter1)</span><br><span class="line">print(list2)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>遍历</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">iter5 = iter(<span class="string">'hello!'</span>)</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> iter5:</span><br><span class="line">	print(<span class="string">f'x:<span class="subst">&#123;x&#125;</span>'</span>)</span><br><span class="line">print(list(iter5))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取单个元素</p>
+<p>next（迭代器对象） - 获取迭代器中的一个元素（当前最前面的那个元素）</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="02-生成器"><a href="#02-生成器" class="headerlink" title="02 生成器"></a>02 生成器</h2><ol>
+<li><p>什么是生成器</p>
+<ol>
+<li>生成器就是迭代器</li>
+<li>调用一个带有 yield 关键字的函数就可以得到一个生成器</li>
+</ol>
+</li>
+<li><p>生成器产生数据（生成器中的元素怎么产生的）</p>
+<p>生成器能生成多少数据就看执行生成器对应的函数的函数体会遇到几次 yield；yield 后面表达式的值就是生成器能够产生的数据</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_gender1</span><span class="params">()</span>:</span></span><br><span class="line">	<span class="keyword">yield</span> <span class="number">10</span></span><br><span class="line">	<span class="keyword">yield</span> <span class="number">100</span></span><br><span class="line">	<span class="keyword">yield</span> </span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">gen1 = create_gender1()</span><br><span class="line">print(list(gen1))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成器产生数据的原理</p>
+<p>当获取生成器元素的时候，会自动调用生成器关联的函数。第一次从函数开始的地方开始执行，直到遇到 yield 为止，并且将 yield 后面的值作为获取到的数据，后面每次都是从上一次结束的位置开始执行，直到遇到 yield 。如果从开始执行到函数结束都没有遇到 yield 就不会产生数据（如果是用 next 去取的数据这个时候会报错）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gender2</span><span class="params">()</span>:</span></span><br><span class="line">	<span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">100</span>, <span class="number">150</span>):</span><br><span class="line">		print(<span class="string">'===='</span>)</span><br><span class="line">		<span class="keyword">yield</span> x</span><br><span class="line">gen2 = gender2()</span><br><span class="line">print(next(gen2))</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#练习：写一个产生4位验证码的生成器（验证码由随机的4位数字和字母组成）</span></span><br><span class="line"><span class="keyword">from</span> rmodom improt romdint</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gender3</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<h2 id="03-生成式"><a href="#03-生成式" class="headerlink" title="03 生成式"></a>03 生成式</h2><ol>
+<li><p>生成式</p>
+<p>生成式就是生成器的简写</p>
+<p>列表推导式的[]变成了()就变成了生成式</p>
+</li>
+</ol>
+<h2 id="04-模块"><a href="#04-模块" class="headerlink" title="04 模块"></a>04 模块</h2><ol>
+<li><p>什么是模块</p>
+<p>一个模块就是一个py文件，py文件的文件名就是模块名</p>
+</li>
+<li><p>在一个模块中使用另一个模块的内容</p>
+<ol>
+<li>哪些能用：所有在指定if语句外的全局变量</li>
+<li>怎么使用：需要先导入模块<ul>
+<li>import 模块名 - 导入后可以使用所有的全局变量；以‘模块名.变量’来使用变量</li>
+<li>from 模块名 import 变量1，变量2， 变量3，…… —— 导入后可以直接使用变量</li>
+<li>from 模块名 import * —— 导入后可以使用所有的全局变量；可以直接使用（不推荐使用）</li>
+<li>import 模块名 as 新模块名 —— 导入模块的时候给模块取别名，以后使用模块的时候使用新名字</li>
+<li>from 模块名 import 变量1 as 新变量1</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="05-导入模块的原理"><a href="#05-导入模块的原理" class="headerlink" title="05 导入模块的原理"></a>05 导入模块的原理</h2><ol>
+<li><p>导入模块的原理</p>
+<p>当使用 import 或者 from import 导入模块的时候，系统会自动将被导入的模块中所有的代码都执行一遍</p>
+</li>
+<li><p>重复导入同一个模块，模块中的内容只会执行一次</p>
+</li>
+<li><p>怎么选择性的执行被导入的内容</p>
+<p>在被导入的模块中添加if语句，将不希望被其他模块执行的代码放到if语句中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">if 语句：</span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">	不希望被其他模块执行的代码</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">原理：</span><br><span class="line">每个模块都有一个属性：__name__，这个属性是用来保存当前模块的名字。__name__默认值就是模块名（模块对应的py文件的文件名）。当我们直接在执行某个模块的时候，这个模块的__name__属性就会自动变成&#39;__main__&#39;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<h2 id="06-包的使用"><a href="#06-包的使用" class="headerlink" title="06 包的使用"></a>06 包的使用</h2><ol>
+<li><p>什么是包</p>
+<p>包就是一种特殊的文件夹</p>
+<ol>
+<li>里面的文件都是py文件</li>
+<li>自带一个_ _ <em>init</em> _ _.py 的文件</li>
+</ol>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/27/day13%20%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%94%9F%E6%88%90%E5%99%A8%E5%92%8C%E6%A8%A1%E5%9D%97/" data-id="ckd3vhqkx000c6kup6sqy3245" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/07/27/day14%20%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          day14 文件操作
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/07/27/day12%20%E4%B8%89%E5%A4%A7%E7%A5%9E%E5%99%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">day12 三大神器</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/27/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/27/day19%20%E6%8B%B7%E8%B4%9D%20%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%92%8C%20socket/">day19 拷贝 内存管理和 socket</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/27/day18%20%E7%BB%A7%E6%89%BF/">day18 继承</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/27/day17%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">day17 面向对象</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/27/day16%20re%E6%A8%A1%E5%9D%97%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">day16 re模块和面向对象</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 sanguog<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

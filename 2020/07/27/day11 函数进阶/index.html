@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>day11 函数进阶 | sanguog的秘密基地</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="#day11 函数进阶 01 函数的返回值 什么是返回值 ​    返回值就是 return 关键字后面的表达式的值     ​    返回值是从函数里面传递到函数外面的数据     ​    语法：   ​                return 表达式1，表达式2，……   ​    说明：   ​                return - 关键字，只能出现在函数体中   ​">
+<meta property="og:type" content="article">
+<meta property="og:title" content="day11 函数进阶">
+<meta property="og:url" content="http://yoursite.com/2020/07/27/day11%20%E5%87%BD%E6%95%B0%E8%BF%9B%E9%98%B6/index.html">
+<meta property="og:site_name" content="sanguog的秘密基地">
+<meta property="og:description" content="#day11 函数进阶 01 函数的返回值 什么是返回值 ​    返回值就是 return 关键字后面的表达式的值     ​    返回值是从函数里面传递到函数外面的数据     ​    语法：   ​                return 表达式1，表达式2，……   ​    说明：   ​                return - 关键字，只能出现在函数体中   ​">
+<meta property="og:locale" content="zh">
+<meta property="article:published_time" content="2020-07-27T02:09:06.377Z">
+<meta property="article:modified_time" content="2020-06-23T01:13:48.171Z">
+<meta property="article:author" content="sanguog">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="sanguog的秘密基地" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">sanguog的秘密基地</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">冲冲冲！</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-day11 函数进阶" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/27/day11%20%E5%87%BD%E6%95%B0%E8%BF%9B%E9%98%B6/" class="article-date">
+  <time datetime="2020-07-27T02:09:06.377Z" itemprop="datePublished">2020-07-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      day11 函数进阶
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#day11 函数进阶</p>
+<h2 id="01-函数的返回值"><a href="#01-函数的返回值" class="headerlink" title="01 函数的返回值"></a>01 函数的返回值</h2><ul>
+<li><p>什么是返回值</p>
+<p>​    返回值就是 return 关键字后面的表达式的值    </p>
+<p>​    返回值是从函数里面传递到函数外面的数据</p>
+</li>
+</ul>
+<p>  ​    <strong>语法</strong>：</p>
+<p>  ​                return 表达式1，表达式2，……</p>
+<p>  ​    <strong>说明</strong>：</p>
+<p>  ​                return - 关键字，只能出现在函数体中</p>
+<p>  ​                a.将数据从函数内容扔到函数的外部        b.结束函数（执行函数的时候只要遇到return函数直接结束）</p>
+<p>  ​    <strong>表达式</strong> - 可以一个都没有（相当于None），可以有一个（返回值就是指定数据），也可以有多个（本质返回的是一个元组）</p>
+<p>  ​    <strong>注意：如果一个函数中没有return（或者执行函数体的时候没有遇到return）那么返回None</strong></p>
+<ul>
+<li><p>怎么在外部使用返回值返回的值</p>
+<p>​    普通数据能做的事函数调用表达式也能做</p>
+</li>
+</ul>
+<ul>
+<li><p>函数调用过程</p>
+<p>​    第一步：回到函数定义的位置</p>
+<p>​    第二步：传参（用实参给形参赋值；传参的时候必须保证每个参数都有值）</p>
+<p>​    第三步：执行函数体</p>
+<p>​    第四步：确定返回值（执行完函数体（a.自然死亡；b.遇到return）</p>
+<p>​    第五步：回到函数调用的位置接着往后执行（这个时候函数调用表达式的值就是函数的值） </p>
+</li>
+</ul>
+<ul>
+<li><p>什么时候需要返回值（初学者）</p>
+<p>​    看实现函数的功能会不会产生新的数据，如果产生了新的数据，就将新的数据作为返回值返回</p>
+</li>
+</ul>
+<p>​        </p>
+<h2 id="02-全局变量和局部变量"><a href="#02-全局变量和局部变量" class="headerlink" title="02 全局变量和局部变量"></a>02 全局变量和局部变量</h2><p>1.函数调用过程中内存的变化</p>
+<p>​        每次在调用函数的时候，系统会自动为这个函数创建一个独立的栈区间，用来保存函数运行过程中产生的数据（函数的参数；函数中声明的变量）；当函数调用结束后这个栈区间会自动销毁（压栈）</p>
+<p>2.全局变量和局部变量</p>
+<ul>
+<li><p>全局变量</p>
+<p>​        没有定义在函数里面或者类里面的变量就是全局变量</p>
+<p>​        作用域:从定义开始到程序结束的任意位置</p>
+</li>
+<li><p>局部变量</p>
+<p>​        定义在函数中的变量就是局部变量（形参是局部变量，注意：定义函数的时候给形参赋的默认值其实是保存在堆里面）</p>
+<p>​        作用域：从定义开始到函数结束的任何位置都可以使用</p>
+</li>
+<li><p>global 和 nonlocal</p>
+<ul>
+<li><p>global：在函数中声明指定的变量是全局变量</p>
+<p>作用：1.在函数中修改全局变量的值    2.在函数中定义一个全局变量</p>
+<p>注意：声明必须放在使用变量前</p>
+</li>
+<li><p>nonlocal：如果希望在局部的局部中去修改局部变量的值，就可以用 nonlocal 进行说明</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="03-匿名函数"><a href="#03-匿名函数" class="headerlink" title="03 匿名函数"></a>03 匿名函数</h2><ul>
+<li><p>什么是匿名函数</p>
+<p>匿名函数本质还是函数，普通函数中除了定义的语法其他全适用于匿名函数</p>
+</li>
+<li><p>定义匿名函数的语法：</p>
+<p>lambda 形参列表：返回值</p>
+<p>说明：</p>
+<p>​        lambda - 关键字，固定写法</p>
+<p>​        形参列表 - ‘形参1，形参2，……’ 的形式存在</p>
+<p>​        返回值 - 写任何有结果的表达式</p>
+</li>
+<li><p>调用匿名函数：函数变量（实参列表）</p>
+<p>匿名函数的本质就是类型是function的数据，普通数据能做的它都能做</p>
+</li>
+</ul>
+<h2 id="04-递归函数"><a href="#04-递归函数" class="headerlink" title="04 递归函数"></a>04 递归函数</h2><p>1.什么是递归函数</p>
+<p>​        在函数内调用函数本身的函数就是递归函数（自己调用自己）<br>​        循环能做的事递归都可以做</p>
+<p>2.怎么使用递归</p>
+<p>​    第一步：确定临界值（在临界值的位置结束函数）</p>
+<p>​    第二步：找关系（找当次循环 f(n) 和上一次循环（f(n-1）之间的关系）</p>
+<p>​    第三步：假设函数的功能已经实现，用f(n-1)去实现f(n)的功能</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/27/day11%20%E5%87%BD%E6%95%B0%E8%BF%9B%E9%98%B6/" data-id="ckd3vhqkt00096kupabbqaw6a" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/07/27/day12%20%E4%B8%89%E5%A4%A7%E7%A5%9E%E5%99%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          day12 三大神器
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/07/27/day9%20%E5%AD%97%E7%AC%A6%E4%B8%B2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">day9 字符串</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/27/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/27/day19%20%E6%8B%B7%E8%B4%9D%20%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%92%8C%20socket/">day19 拷贝 内存管理和 socket</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/27/day18%20%E7%BB%A7%E6%89%BF/">day18 继承</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/27/day17%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">day17 面向对象</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/27/day16%20re%E6%A8%A1%E5%9D%97%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">day16 re模块和面向对象</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 sanguog<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

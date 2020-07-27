@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>day5 循环关键字 | sanguog的秘密基地</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="python学习 day501 三目运算符1. C、JAVA、JS、object - C语言的三目运算符： ?: 语法： 表达式1？表达式2：表达式3  运算规则： 判断表达式1的结果是否为真，整个三目运算表达式的结果是表达式2的值，否则是表达式3的值 12a &#x3D; 10 &gt; 20?30:40print(a)     # 40    2.python中的三目运算符： if - els">
+<meta property="og:type" content="article">
+<meta property="og:title" content="day5 循环关键字">
+<meta property="og:url" content="http://yoursite.com/2020/07/27/day5%20%E5%BE%AA%E7%8E%AF%E5%85%B3%E9%94%AE%E5%AD%97/index.html">
+<meta property="og:site_name" content="sanguog的秘密基地">
+<meta property="og:description" content="python学习 day501 三目运算符1. C、JAVA、JS、object - C语言的三目运算符： ?: 语法： 表达式1？表达式2：表达式3  运算规则： 判断表达式1的结果是否为真，整个三目运算表达式的结果是表达式2的值，否则是表达式3的值 12a &#x3D; 10 &gt; 20?30:40print(a)     # 40    2.python中的三目运算符： if - els">
+<meta property="og:locale" content="zh">
+<meta property="article:published_time" content="2020-07-27T02:09:06.364Z">
+<meta property="article:modified_time" content="2020-06-12T06:44:35.713Z">
+<meta property="article:author" content="sanguog">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="sanguog的秘密基地" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">sanguog的秘密基地</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">冲冲冲！</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-day5 循环关键字" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/27/day5%20%E5%BE%AA%E7%8E%AF%E5%85%B3%E9%94%AE%E5%AD%97/" class="article-date">
+  <time datetime="2020-07-27T02:09:06.364Z" itemprop="datePublished">2020-07-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      day5 循环关键字
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="python学习-day5"><a href="#python学习-day5" class="headerlink" title="python学习 day5"></a>python学习 day5</h1><h2 id="01-三目运算符"><a href="#01-三目运算符" class="headerlink" title="01 三目运算符"></a>01 三目运算符</h2><h3 id="1-C、JAVA、JS、object-C语言的三目运算符："><a href="#1-C、JAVA、JS、object-C语言的三目运算符：" class="headerlink" title="1. C、JAVA、JS、object - C语言的三目运算符： ?:"></a>1. C、JAVA、JS、object - C语言的三目运算符： ?:</h3><ul>
+<li><p>语法：</p>
+<p>表达式1？表达式2：表达式3</p>
+</li>
+<li><p>运算规则：</p>
+<p>判断表达式1的结果是否为真，整个三目运算表达式的结果是表达式2的值，否则是表达式3的值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; 10 &gt; 20?30:40</span><br><span class="line">print(a)     # 40</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="2-python中的三目运算符：-if-else"><a href="#2-python中的三目运算符：-if-else" class="headerlink" title="2.python中的三目运算符： if - else"></a>2.python中的三目运算符： if - else</h3><ul>
+<li><p>语法：</p>
+<p>表达式2 If 表达式1 else 表达式3</p>
+</li>
+<li><p>运算规则：</p>
+<p>判断表达式1的结果是否为真，如果为真整个三目运算表达式的结果是表达式2的 值，否则是表达式3的值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; 30 if 100 &gt; 3 else 49</span><br><span class="line">print(a)   # 30</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="02-循环关键字"><a href="#02-循环关键字" class="headerlink" title="02 循环关键字"></a>02 循环关键字</h2><h3 id="1-continue"><a href="#1-continue" class="headerlink" title="1. continue"></a>1. continue</h3><p>​    continue 是循环体中的关键字，只能出现在循环中。</p>
+<p>​    如果在执行循环的过程中遇到了continue，当次循环结束，直接进入下次循环的判断</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for x in range(5):</span><br><span class="line">	print(&#39;&#x3D;&#x3D;&#x3D;&#x3D;&#39;)</span><br><span class="line">	continue</span><br><span class="line">	print(&#39;------&#39;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sum1 &#x3D; 0</span><br><span class="line">for x in range(20):</span><br><span class="line">	if x % 7 &#x3D;&#x3D; 0;</span><br><span class="line">		continue</span><br><span class="line">	sum1 +&#x3D; x</span><br><span class="line">print(sum1)</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-break"><a href="#2-break" class="headerlink" title="2. break"></a>2. break</h3><p>​    break 是循环体中的关键字，只能出现在循环中。</p>
+<p>​    如果在执行循环的过程中遇到了break，整个循环直接结束。</p>
+<pre><code>for x in range(5):
+print(&apos;====&apos;)
+break
+print(&apos;------&apos;)</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># 练习： 找到大于1000的整数中第一个能被199整除的数</span><br><span class="line">num &#x3D; 1000</span><br><span class="line">while True:</span><br><span class="line">	if num % 199 &#x3D;&#x3D; 0:</span><br><span class="line">		print(num)</span><br><span class="line">		break</span><br><span class="line">	num +&#x3D; 1</span><br><span class="line">	</span><br><span class="line"># 练习2：用while实现功能，从1打印到100</span><br><span class="line">num &#x3D; 1</span><br><span class="line">while True:</span><br><span class="line">	print(num)</span><br><span class="line">	if num &#x3D;&#x3D; 100:</span><br><span class="line">		break</span><br><span class="line">	num +&#x3D; 1</span><br><span class="line"></span><br><span class="line"># 练习3：写程序实现不断输入内容，直到输入的数据是0为止</span><br><span class="line">while True:</span><br><span class="line">	print(&#39;请输入：&#39;)</span><br><span class="line">	a &#x3D; input（）</span><br><span class="line">	if int(a) &#x3D;&#x3D; &#39;0&#39;:</span><br><span class="line">		break</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-else"><a href="#3-else" class="headerlink" title="3.else"></a>3.else</h3><ul>
+<li><p>for - else结构：</p>
+<p>for 变量 in序列：</p>
+<p>​    循环体</p>
+<p>else：</p>
+<p>代码块</p>
+</li>
+<li><p>while - else结构：</p>
+<p>while 条件语句：</p>
+<p>​    循环体</p>
+<p>else：</p>
+<p>​    代码块</p>
+</li>
+<li><p>循环结构后加 else 不会影响原循环结构的执行； 如果和else关联的循环是自然死亡的，else后面的代码块就会执行，如果 else 关联的循环是因为遇到 break 而结束的那么else后面的代码块就不会执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">练习： 判断指定的数字是否是素数</span><br><span class="line">num &#x3D; int(input())</span><br><span class="line">for x in range(2,num):</span><br><span class="line">	if num % x &#x3D;&#x3D; 0:</span><br><span class="line">		print(&#39;不是素数&#39;)</span><br><span class="line">		break</span><br><span class="line">else:</span><br><span class="line">	print(&#39;是素数&#39;)</span><br><span class="line"></span><br><span class="line">num &#x3D; int(input())</span><br><span class="line">flog &#x3D; True</span><br><span class="line">for x in range(2, num):</span><br><span class="line">	if num % x &#x3D;&#x3D; 0:</span><br><span class="line">		flog &#x3D; False</span><br><span class="line">		break</span><br><span class="line">if flog:</span><br><span class="line">	print(&#39;是素数&#39;)</span><br></pre></td></tr></table></figure>
+
+<p>​</p>
+</li>
+</ul>
+<h3 id="4-for-循环和-while-循环怎么选"><a href="#4-for-循环和-while-循环怎么选" class="headerlink" title="4. for 循环和 while 循环怎么选"></a>4. for 循环和 while 循环怎么选</h3><p>​    如果循环次数不确定就使用while循环，否则用 for 循环</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">练习： 写一个猜数字的小游戏</span><br><span class="line">	随机生成一个0~100的数字，玩家不断输入数字，直到输入的值和随机生成的数相等，如果输入错了提示“大了再小点儿”或者“小了再大点儿”，输入正确游戏结束</span><br><span class="line"># 导入随机函数</span><br><span class="line">from random import randint</span><br><span class="line"># randint(M, N) - 产生 M ~ N 的随机整数</span><br><span class="line">num &#x3D; randint(0, 100)</span><br><span class="line">x &#x3D; int(input())</span><br><span class="line">while True:</span><br><span class="line">	if x &#x3D;&#x3D; num:</span><br><span class="line">		print(&#39;对了&#39;)</span><br><span class="line">		break</span><br><span class="line">	elif x &lt; num:</span><br><span class="line">		print(&#39;小了&#39;)</span><br><span class="line">	else:</span><br><span class="line">		print(&#39;大了&#39;)</span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/27/day5%20%E5%BE%AA%E7%8E%AF%E5%85%B3%E9%94%AE%E5%AD%97/" data-id="ckd3vhqk900046kup5vxu5sch" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/07/27/day6%20%E5%88%97%E8%A1%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          day6 列表
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/07/27/day4%20%E5%88%86%E6%94%AF%E5%92%8C%E5%BE%AA%E7%8E%AF/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">day4 分支和循环</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/27/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/27/day19%20%E6%8B%B7%E8%B4%9D%20%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%92%8C%20socket/">day19 拷贝 内存管理和 socket</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/27/day18%20%E7%BB%A7%E6%89%BF/">day18 继承</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/27/day17%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">day17 面向对象</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/27/day16%20re%E6%A8%A1%E5%9D%97%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">day16 re模块和面向对象</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 sanguog<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
